@@ -1,0 +1,26 @@
+﻿@model IEnumerable<ProductCatalogWeb.Models.Product>
+
+@{
+    ViewData["Title"] = "Products";
+}
+
+<h1>Products</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>@p.Name</td>
+                <td>@p.Price:C</td>
+                <td>@p.Description</td>
+            </tr>
+        }
+    </tbody>
+</table>
